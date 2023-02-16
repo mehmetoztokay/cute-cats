@@ -1,14 +1,23 @@
-import './globals.css'
+import '@/styles/reset.css'
+import '@/styles/global.css'
+
+import { Inter } from '@next/font/google'
+// Created instance of the font
+const interFontFamily = Inter({ subsets: ['latin'] })
+
+// Import components
+import Header from '@/components/header'
+import Footer from '@/components/footer'
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
+    <html lang="tr" className={interFontFamily.className}>
       <head />
-      <body>{children}</body>
+      <body className="container">
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   )
 }
