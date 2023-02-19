@@ -1,7 +1,10 @@
-import '@/styles/reset.scss'
-import '@/styles/global.scss'
+'use-client'
+import '@/src/styles/reset.scss'
+import '@/src/styles/global.scss'
+import { AuthContextProvider } from '@/src/context/AuthContext'
 
 import { Inter } from '@next/font/google'
+
 // Created instance of the font
 const interFontFamily = Inter({ subsets: ['latin'] })
 
@@ -14,8 +17,10 @@ export default function RootLayout({ children }) {
     <html lang="tr" className={interFontFamily.className}>
       <head />
       <body className="container">
-        <Header />
-        <main>{children}</main>
+        <AuthContextProvider>
+          <Header />
+          <main>{children}</main>
+        </AuthContextProvider>
         <Footer />
       </body>
     </html>

@@ -11,8 +11,8 @@ const nextConfig = {
         destination: 'https://api.thecatapi.com',
       },
       {
-        source: '/cats',
-        destination: 'https://cdn2.thecatapi.com',
+        source: '/cats-auth',
+        destination: 'https://identitytoolkit.googleapis.com/v1',
       },
     ]
   },

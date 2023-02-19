@@ -1,4 +1,4 @@
-@import '@/styles/variables.module.scss';
+@import '@/src/styles/variables.module.scss';
 
 .header {
   padding: 1em 0;
@@ -19,7 +19,6 @@
   .header_navigation {
     display: flex;
     align-items: center;
-    gap: 1.5em;
-    gap: 1.5em;
+    gap: 1em;
   }
 }
